@@ -1,3 +1,4 @@
+import React from 'react';
 import Head from "next/head";
 import Image from "next/image";
 import styles from "./layout.module.css";
@@ -11,6 +12,7 @@ export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
       <Head>
+        <title>Blog</title>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"

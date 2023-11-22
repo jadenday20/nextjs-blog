@@ -1,8 +1,9 @@
+import React from 'react';
 import Layout from "../../components/layout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
 import Head from "next/head";
 import Date from "../../components/date";
-import utilStyles from "../../styles/utils.module.css";
+import Styles from "../../styles/utils.module.css";
 
 export async function getStaticProps({ params }) {
   // Add the "await" keyword like this:
@@ -30,8 +31,8 @@ export default function Post({ postData }) {
         <title>{postData.title}</title>
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-        <div className={utilStyles.lightText}>
+        <h1 className={Styles.headingXl}>{postData.title}</h1>
+        <div className={Styles.lightText}>
           <Date dateString={postData.date} />
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
